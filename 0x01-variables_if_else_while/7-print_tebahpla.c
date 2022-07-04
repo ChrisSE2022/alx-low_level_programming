@@ -1,4 +1,4 @@
-#include <stdio.h>
+ #include <stdio.h>
 
 /**
 * main - prints the alphabetics
@@ -7,12 +7,14 @@
 */
 int main(void)
 {
-	int i;
+	char z = 'z';
 
-	for (i = 0; i <= 9; i++)
-{
-	putchar(i + '0');
-}
+	for (z = 'z'; z >= 'a'; z--)
+	{
+	putchar(z);
+	}
+
+
 	putchar('\n');
 	return (0);
 }
