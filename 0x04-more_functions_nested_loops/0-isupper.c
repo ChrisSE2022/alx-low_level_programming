@@ -3,7 +3,7 @@
 /**
 *_isupper - function that checks for uppercase character
 *
-*@c - input interger
+*@c:  input interger
 *Return: Retuns 1 for uppercase and 0 for anything else
 */
 int _isupper(int c)
