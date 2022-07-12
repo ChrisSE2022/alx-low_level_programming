@@ -13,7 +13,7 @@ int main(void)
 
 	time_t tiempo;
 
-	srand((unsigned int) time(&tiempo));
+	srand((unsigned) time(&tiempo));
 
 	while ((correct_number - var) > 127)
 	{
