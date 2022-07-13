@@ -5,7 +5,7 @@
 *
 * @src:First string
 * @dest:second string
-*
+* Return: Combined value of strings
 */
 char *_strcat(char *dest, char *src)
 {
