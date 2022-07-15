@@ -3,8 +3,8 @@
 
 /**
 * reverse_array - Compares two strings
-* @s1: Pointer that links with a string
-* @s2: Pointer that links with a string
+* @a: first interger
+* @n: interger n
 *
 * Return: Nothing
 **/
