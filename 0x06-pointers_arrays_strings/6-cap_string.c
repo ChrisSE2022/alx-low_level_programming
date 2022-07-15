@@ -1,33 +1,36 @@
 #include "main.h"
-
+#include <stdio.h>
+#include <string.h>
 
 /**
-* cap_string - Capitalizes all the words
-* @a: Pointer
-* Return: Returns characters
-**/
-
-char *cap_string(char *a)
+* cap_string - capitalize every first word in a string
+* @s: string
+* Return: string
+*/
+char *cap_string(char *s)
 {
-	int i, j;
+	int i = 0;
 
-	if (a[j] >= 97 && a[j] <= 122)
+	if (s[i] >= 'a' && s[i] <= 'z')
+		s[i] = s[i] - 'a' + 'A';
+	i++;
+	while (s[i] != '\0')
 	{
-		a[j] = a[j] - 32;
-	}
-	for (i = 1; a[i] != 0; i++)
-	{
-	if ((a[i - 1] == ' ' || a[i - 1] == '\n' || a[i - 1] == '\t'
-	|| a[i - 1] == ',' || a[i - 1] == ';' || a[i - 1] == '!'
+		if ((s[i] >= 'a' && s[i] <= 'z')
 
-	|| a[i - 1] == '?' || a[i - 1] == '"' || a[i - 1] == '('
+			&& (s[i - 1] == ',' || s[i - 1] == ';' || s[i - 1] == '.' ||
 
-	|| a[i - 1] == ')' || a[i - 1] == '{' || a[i - 1] == '}'
+			s[i - 1] == '!' || s[i - 1] == '?' || s[i - 1] == '"' ||
 
-	|| a[i - 1] == '.') && (a[i] > 'a' && a[i] < 'z'))
-	{
-		a[i] = a[i] - 32;
+			s[i - 1] == '(' || s[i - 1] == ')' || s[i - 1] == '{' ||
+
+			s[i - 1] == '}' || s[i - 1] == ' ' || s[i - 1] == '\t'
+
+			|| s[i - 1] == '\n'))
+
+			s[i] = s[i] - 'a' + 'A';
+		i++;
 	}
-	}
-	return (a);
+	return (s);
+
 }
