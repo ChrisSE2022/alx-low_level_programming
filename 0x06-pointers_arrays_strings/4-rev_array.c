@@ -1,23 +1,27 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 
 /**
-* reverse_array - reverses contents in an array
-* @a: array
-* @n: number of elements in array
-*/
+* reverse_array - Compares two strings
+* @s1: Pointer that links with a string
+* @s2: Pointer that links with a string
+*
+* Return: Nothing
+**/
 void reverse_array(int *a, int n)
-{
-	int x, y = 0;
-	int z = n - 1;
 
-	while (y < x)
+{
+	int i;
+	int tem;
+
+	i = 0;
+	n = n - 1;
+	while (i < n)
 	{
-		x = *(a + y);
-		*(a + y) = *(a + z);
-		*(a + z) = x;
-		y++, z--;
+		tem = a[i];
+		a[i] = a[n];
+		a[n] = tem;
+		i++;
+		n--;
 	}
 }
