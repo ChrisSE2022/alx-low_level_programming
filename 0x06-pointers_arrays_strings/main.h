@@ -8,5 +8,5 @@ char *string_toupper(char *);
 char *cap_string(char *);
 void print_number(int n);
 int _main(void);
-char *rot13(char *s);:wq
+char *rot13(char *s);
 
