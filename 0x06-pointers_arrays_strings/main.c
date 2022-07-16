@@ -1,5 +1,7 @@
 #include "main.h"
 
+#include <stdio.h>
+
 
 
 /**
@@ -16,25 +18,15 @@ int main(void)
 
 {
 
-    print_number(98);
+    char buffer[] = "This is a string!\0And this is the rest of the #buffer :)\1\2\3\4\5\6\7#cisfun\n\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\x20\x21\x34\x56#pointersarefun #infernumisfun\n";
 
-    _putchar('\n');
 
-    print_number(402);
 
-    _putchar('\n');
+    printf("%s\n", buffer);
 
-    print_number(1024);
+    printf("---------------------------------\n");
 
-    _putchar('\n');
-
-    print_number(0);
-
-    _putchar('\n');
-
-    print_number(-98);
-
-    _putchar('\n');
+    print_buffer(buffer, sizeof(buffer));
 
     return (0);
 
