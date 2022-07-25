@@ -17,6 +17,7 @@ char *create_array(unsigned int size, char c)
 
 	if (size == 0)
 	{
+		free(t);
 		return (NULL);
 	}
 	else
@@ -26,5 +27,6 @@ char *create_array(unsigned int size, char c)
 		*(t + i) = c;
 		i++;
 	}
+	free(t);
 	return (t);
 }
