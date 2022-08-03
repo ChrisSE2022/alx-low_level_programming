@@ -1,12 +1,12 @@
 #include "function_pointers.h"
 
 /**
-* int_index - 
-* @array:
-* @size: 
+* int_index - returns the index of the first element
+* @array: The array
+* @size: The size of array
 * @cmp: Function to a pointer
 *
-* Return: 
+* Return: Checks for success
 */
 
 int int_index(int *array, int size, int (*cmp)(int))
