@@ -6,7 +6,7 @@
 /**
 * print_strings - Prints it's parameters strings.
 * @separator: Is the string to be printed between numbers.
-* @n: Constant variable that corresponds to the number of arguments passed.
+* @n: Constant variable
 * Return: All parameters printed strings.
 **/
 
@@ -23,11 +23,9 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	if (ptr == NULL)
 	printf("(nil)");
 	else
-	{
 	printf("%s", ptr);
 	if (i < (n - 1) && separator != NULL)
 	printf("%s", separator);
-	}
 	}
 	va_end(ap);
 	printf("\n");
