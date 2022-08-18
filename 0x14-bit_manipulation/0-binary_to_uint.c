@@ -1,6 +1,5 @@
-#include "main.h"
 #include <stdio.h>
-#include <math.h>
+#include <string.h>
 
 /**
  * _pow - custom pow fn
@@ -8,38 +7,45 @@
  * @p: power to raise base to
  * Return: result of pow calc
  */
+
 unsigned int _pow(unsigned int base, unsigned int p)
 {
 	if (p != 0)
 	{
-	return (base * _pow(base, p - 1));
+		return (base * _pow(base, p - 1));
 	}
 	else
 	{
-	return (1);
+		return (1);
 	}
 }
+
 /**
-*binary_to_uint - fnct to change binary to decimal
-* @b: String
-* return - returns the results
-*/
+  * binary_to_uint - fn to convert binary to decimal
+  *@b: char str containing the bits
+  * Return: unsigned int
+  */
 
 unsigned int binary_to_uint(const char *b)
-{
- 
-	int place = 0;
-	int rem = 0;
-	int result = 0;
-	int str;
-	str = atoi(b);
 
-	while(str != 0)
+{
+	unsigned int i, sum, str_l;
+
+	if (b == NULL)
 	{
-		rem = str % 10;
-		result = result + rem * (_pow(2, place));
-		place++;
-		str = str/10;
+		return (0);
 	}
-	return(result);
+
+	str_l = strlen(b);
+	sum = 0;
+
+	for (i = 0; i < str_l; i++)
+	{
+	if (b[i] != '1' && b[i] != '0')
+	{
+	return (0);
+	}
+	sum = sum + ((unsigned int) _pow(2, i) * (b[str_l - 1 - i] - '0'));
+	}
+	return (sum);
 }
