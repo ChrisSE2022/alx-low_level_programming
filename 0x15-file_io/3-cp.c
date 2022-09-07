@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
 	if (c_status == -1)
 		c_error(ffrom);
 
-i	c_status = close(fto);
+	c_status = close(fto);
 	if (c_status == -1)
 		c_error(fto);
 	return (0);
